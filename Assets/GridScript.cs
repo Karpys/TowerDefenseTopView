@@ -5,6 +5,7 @@ using UnityEngine;
 public class GridScript : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Color PathColor;
     void Start()
     {
         
