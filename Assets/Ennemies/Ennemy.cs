@@ -25,6 +25,7 @@ public class Ennemy : MonoBehaviour
             }
             else
             {
+                transform.Rotate(new Vector3(0, 0, Path[0].GetComponent<TransfromScript>().Turn));
                 Path.Remove(Path[0]);
             }
         }
