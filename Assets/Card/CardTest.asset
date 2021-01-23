@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: CardTest
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
-  name: 
+  name: Boost
+  description: "Boost la vitesse de la tourelle li\xE9e"
   cost: 0
