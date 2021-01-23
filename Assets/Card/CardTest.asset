@@ -15,4 +15,4 @@ MonoBehaviour:
   Image: {fileID: 21300000, guid: f6dfc5706a435874088940fef2290aa7, type: 3}
   name: Boost
   description: "Boost la vitesse de la tourelle li\xE9e"
-  cost: 0
+  cost: 5

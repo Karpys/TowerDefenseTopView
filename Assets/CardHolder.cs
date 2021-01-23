@@ -12,12 +12,14 @@ public class CardHolder : MonoBehaviour
     public Image Image;
     public TextMeshProUGUI Nom;
     public TextMeshProUGUI Description;
+    public TextMeshProUGUI Cost;
    
     void Start()
     {
         Image.sprite = stats.Image;
         Nom.text = stats.name;
         Description.text = stats.description;
+        Cost.text = stats.cost.ToString();
     }
 
     // Update is called once per frame
