@@ -618,11 +618,13 @@ MonoBehaviour:
   Description: {fileID: 2076327156526783005}
   Cost: {fileID: 3223745541082143114}
   Descri: {fileID: 5237210650805154528}
+  inventory: {fileID: 0}
   startPos: {x: 0, y: 0, z: 0}
   PostoGo: {x: 0, y: 0, z: 0}
   MouseOn: 0
   UpDiff: 0
   speed: 0
+  id: 0
 --- !u!212 &1886204722896755101
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -864,8 +866,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 500
-  m_fontSizeBase: 500
+  m_fontSize: 250
+  m_fontSizeBase: 250
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
