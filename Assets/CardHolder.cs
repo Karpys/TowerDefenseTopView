@@ -14,6 +14,7 @@ public class CardHolder : MonoBehaviour
     public TextMeshProUGUI Description;
     public TextMeshProUGUI Cost;
     public GameObject Descri;
+    public InventoryCard inventory;
 
 
 
@@ -22,6 +23,7 @@ public class CardHolder : MonoBehaviour
     public bool MouseOn;
     public float UpDiff;
     public float speed;
+    public int id;
     void Start()
     {
         Image.sprite = stats.Image;
@@ -29,24 +31,30 @@ public class CardHolder : MonoBehaviour
         Description.text = stats.description;
         Cost.text = stats.cost.ToString();
         startPos = transform.position;
+        PostoGo = startPos;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, PostoGo, speed);
-        if(Input.GetMouseButton(0) && MouseOn)
+        /*transform.position = Vector3.Lerp(transform.position, PostoGo, speed);*/
+        if (Input.GetMouseButton(0) && MouseOn && GameManager.CardHand == this.gameObject)
         {
+            inventory.Replace(id);
             transform.position = Mouse.MousePosition;
+            GameManager.CardInHand = true;
         }
+
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Mouse"))
+        if(collision.CompareTag("Mouse") && GameManager.CardInHand==false)
         {
             PostoGo = new Vector3(startPos.x, startPos.y + UpDiff, startPos.z);
             MouseOn = true;
+            GameManager.CardHand = this.gameObject;
             Descri.SetActive(true);
         }
     }
