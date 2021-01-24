@@ -53,5 +53,16 @@ public class InventoryCard : MonoBehaviour
         }
         ListCard.Remove(ListCard[place]);
     }
+
+    public void AddCard(GameObject Card)
+    {
+        if(ListCard.Count<ListPlace.Count && GameManager.CardInHand==false)
+        {
+            GameObject Carte = Instantiate(Card, ListPlace[ListCard.Count].transform.position, transform.rotation);
+            Carte.GetComponent<CardHolder>().inventory = this;
+            Carte.GetComponent<CardHolder>().id = ListCard.Count;
+            ListCard.Add(Carte);
+        }
+    }
 }
 
