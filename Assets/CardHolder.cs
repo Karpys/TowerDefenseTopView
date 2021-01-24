@@ -37,14 +37,27 @@ public class CardHolder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*transform.position = Vector3.Lerp(transform.position, PostoGo, speed);*/
-        if (Input.GetMouseButton(0) && MouseOn && GameManager.CardHand == this.gameObject)
+        transform.position = Vector3.Lerp(transform.position, PostoGo, speed);
+        if (Input.GetMouseButtonUp(0) && MouseOn)
+        {
+            inventory.PlaceEnd(id, this.gameObject);
+            GameManager.CardInHand = false;
+            GameManager.CardHand = null;
+        }
+
+        if (Input.GetMouseButtonDown(0) && MouseOn && GameManager.CardHand==this.gameObject)
         {
             inventory.Replace(id);
+        }
+
+        if (Input.GetMouseButton(0) && MouseOn && GameManager.CardHand == this.gameObject)
+        {
+            
             transform.position = Mouse.MousePosition;
             GameManager.CardInHand = true;
         }
 
+        
         
     }
 

@@ -32,15 +32,26 @@ public class InventoryCard : MonoBehaviour
         }
     }
 
+    public void PlaceEnd(int id, GameObject card)
+    {
+        ListCard.Add(card);
+        /*card.transform.position = ListPlace[ListCard.Count-1].transform.position;*/
+        card.GetComponent<CardHolder>().startPos = ListPlace[ListCard.Count-1].transform.position;
+        card.GetComponent<CardHolder>().PostoGo = ListPlace[ListCard.Count-1].transform.position;
+        card.GetComponent<CardHolder>().id = ListCard.Count-1;
+    }
+
     public void Replace(int place)
     {
         for(int i = place;i<ListCard.Count-1;i++)
         {
-            Debug.Log("Count"+(i+1));
-            ListCard[i + 1].transform.position = ListPlace[i].transform.position;
+            Debug.Log("Count "+(i+1));
+            /*ListCard[i + 1].transform.position = ListPlace[i].transform.position;*/
+            ListCard[i + 1].GetComponent<CardHolder>().startPos= ListPlace[i].transform.position;
             ListCard[i + 1].GetComponent<CardHolder>().PostoGo = ListPlace[i].transform.position;
             ListCard[i + 1].GetComponent<CardHolder>().id = i;
         }
+        ListCard.Remove(ListCard[place]);
     }
 }
 
