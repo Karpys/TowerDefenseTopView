@@ -9,6 +9,7 @@ public class CreatePath : MonoBehaviour
 
     public List<GameObject> ListTransform;
     public CreateGridMap grid;
+    public float speed;
     void Start()
     {
         transform.position = ListTransform[0].transform.position;
@@ -21,7 +22,7 @@ public class CreatePath : MonoBehaviour
         {
         if(ListTransform[0].transform.position!=transform.position)
         {
-            transform.position = Vector2.MoveTowards(transform.position, ListTransform[0].transform.position,0.2f);
+            transform.position = Vector2.MoveTowards(transform.position, ListTransform[0].transform.position,speed);
         }else
         {
             ListTransform.Remove(ListTransform[0]);
