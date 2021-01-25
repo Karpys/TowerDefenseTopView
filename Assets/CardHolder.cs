@@ -57,7 +57,13 @@ public class CardHolder : MonoBehaviour
             GameManager.CardInHand = true;
         }
 
-        
+        if(Input.GetKeyDown(KeyCode.S) && MouseOn)
+        {
+            GameManager.CardHand = null;
+            GameManager.CardInHand = false;
+            inventory.SupCard(id);
+            Destroy(gameObject);
+        }
         
     }
 

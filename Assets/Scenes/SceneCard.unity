@@ -292,7 +292,12 @@ PrefabInstance:
     - target: {fileID: 902910145256920482, guid: e770a0ea03f15dd47933bf35f1143c87,
         type: 3}
       propertyPath: ListCardInst.Array.size
-      value: 4
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 902910145256920482, guid: e770a0ea03f15dd47933bf35f1143c87,
+        type: 3}
+      propertyPath: Deck.Array.size
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 902910145256920482, guid: e770a0ea03f15dd47933bf35f1143c87,
         type: 3}
@@ -339,6 +344,66 @@ PrefabInstance:
     - target: {fileID: 902910145256920482, guid: e770a0ea03f15dd47933bf35f1143c87,
         type: 3}
       propertyPath: ListCardInst.Array.data[7]
+      value: 
+      objectReference: {fileID: 4608949480037449215, guid: 3a205229c476a2d498a4f32202d1b47a,
+        type: 3}
+    - target: {fileID: 902910145256920482, guid: e770a0ea03f15dd47933bf35f1143c87,
+        type: 3}
+      propertyPath: Deck.Array.data[0]
+      value: 
+      objectReference: {fileID: 4608949480037449215, guid: 3a205229c476a2d498a4f32202d1b47a,
+        type: 3}
+    - target: {fileID: 902910145256920482, guid: e770a0ea03f15dd47933bf35f1143c87,
+        type: 3}
+      propertyPath: Deck.Array.data[1]
+      value: 
+      objectReference: {fileID: 4608949480037449215, guid: 3a205229c476a2d498a4f32202d1b47a,
+        type: 3}
+    - target: {fileID: 902910145256920482, guid: e770a0ea03f15dd47933bf35f1143c87,
+        type: 3}
+      propertyPath: Deck.Array.data[2]
+      value: 
+      objectReference: {fileID: 4608949480037449215, guid: 3a205229c476a2d498a4f32202d1b47a,
+        type: 3}
+    - target: {fileID: 902910145256920482, guid: e770a0ea03f15dd47933bf35f1143c87,
+        type: 3}
+      propertyPath: Deck.Array.data[3]
+      value: 
+      objectReference: {fileID: 4608949480037449215, guid: 3a205229c476a2d498a4f32202d1b47a,
+        type: 3}
+    - target: {fileID: 902910145256920482, guid: e770a0ea03f15dd47933bf35f1143c87,
+        type: 3}
+      propertyPath: Deck.Array.data[4]
+      value: 
+      objectReference: {fileID: 4608949480037449215, guid: 3a205229c476a2d498a4f32202d1b47a,
+        type: 3}
+    - target: {fileID: 902910145256920482, guid: e770a0ea03f15dd47933bf35f1143c87,
+        type: 3}
+      propertyPath: Deck.Array.data[5]
+      value: 
+      objectReference: {fileID: 4608949480037449215, guid: 3a205229c476a2d498a4f32202d1b47a,
+        type: 3}
+    - target: {fileID: 902910145256920482, guid: e770a0ea03f15dd47933bf35f1143c87,
+        type: 3}
+      propertyPath: Deck.Array.data[6]
+      value: 
+      objectReference: {fileID: 4608949480037449215, guid: 3a205229c476a2d498a4f32202d1b47a,
+        type: 3}
+    - target: {fileID: 902910145256920482, guid: e770a0ea03f15dd47933bf35f1143c87,
+        type: 3}
+      propertyPath: Deck.Array.data[7]
+      value: 
+      objectReference: {fileID: 4608949480037449215, guid: 3a205229c476a2d498a4f32202d1b47a,
+        type: 3}
+    - target: {fileID: 902910145256920482, guid: e770a0ea03f15dd47933bf35f1143c87,
+        type: 3}
+      propertyPath: Deck.Array.data[8]
+      value: 
+      objectReference: {fileID: 4608949480037449215, guid: 3a205229c476a2d498a4f32202d1b47a,
+        type: 3}
+    - target: {fileID: 902910145256920482, guid: e770a0ea03f15dd47933bf35f1143c87,
+        type: 3}
+      propertyPath: Deck.Array.data[9]
       value: 
       objectReference: {fileID: 4608949480037449215, guid: 3a205229c476a2d498a4f32202d1b47a,
         type: 3}
@@ -488,11 +553,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 788106370}
         m_MethodName: AddCard
-        m_Mode: 2
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 4608949480037449215, guid: 3a205229c476a2d498a4f32202d1b47a,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

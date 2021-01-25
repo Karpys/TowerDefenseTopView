@@ -8,6 +8,7 @@ public class InventoryCard : MonoBehaviour
     public List<GameObject> ListPlace;
     public List<GameObject> ListCardInst;
     public List<GameObject> ListCard;
+    public List<GameObject> Deck;
     void Start()
     {
         PlaceCardInit();
@@ -54,15 +55,23 @@ public class InventoryCard : MonoBehaviour
         ListCard.Remove(ListCard[place]);
     }
 
-    public void AddCard(GameObject Card)
+    public void AddCard()
     {
         if(ListCard.Count<ListPlace.Count && GameManager.CardInHand==false)
         {
-            GameObject Carte = Instantiate(Card, ListPlace[ListCard.Count].transform.position, transform.rotation);
+            GameObject Carte = Instantiate(Deck[0], ListPlace[ListCard.Count].transform.position, transform.rotation);
             Carte.GetComponent<CardHolder>().inventory = this;
             Carte.GetComponent<CardHolder>().id = ListCard.Count;
+            GameObject card = Deck[0];
+            Deck.Remove(Deck[0]);
+            Deck.Add(card);
             ListCard.Add(Carte);
         }
+    }
+
+    public void SupCard(int id)
+    {
+        Replace(id);
     }
 }
 
