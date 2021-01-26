@@ -630,7 +630,6 @@ MonoBehaviour:
   id: 0
   attach: 0
   CanPick: 0
->>>>>>> ClassCard
 --- !u!212 &1886204722896755101
 SpriteRenderer:
   m_ObjectHideFlags: 0
