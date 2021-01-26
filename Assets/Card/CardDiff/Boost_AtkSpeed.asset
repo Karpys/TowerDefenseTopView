@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1f3dff7ab242024eb5eb3393a6c5ff3, type: 3}
   m_Name: Boost_AtkSpeed
   m_EditorClassIdentifier: 
-  Image: {fileID: 0}
-  name: 
-  description: 
-  cost: 0
+  Image: {fileID: 21300000, guid: c948e563d94127142b3315718a2b8ba6, type: 3}
+  name: Boost
+  description: Boost Atk Speed
+  cost: 4
