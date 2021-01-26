@@ -69,9 +69,9 @@ public class InventoryCard : MonoBehaviour
         }
     }
 
-    public void SupCard(int id)
+    /*public void SupCard(int id)
     {
         Replace(id);
-    }
+    }*/
 }
 
