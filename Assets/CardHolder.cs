@@ -24,6 +24,8 @@ public class CardHolder : MonoBehaviour
     public float UpDiff;
     public float speed;
     public int id;
+    public bool attach;
+    public bool CanPick;
     void Start()
     {
         Image.sprite = stats.Image;
@@ -38,7 +40,7 @@ public class CardHolder : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.Lerp(transform.position, PostoGo, speed);
-        if (Input.GetMouseButtonUp(0) && MouseOn)
+        /*if (Input.GetMouseButtonUp(0) && MouseOn)
         {
             inventory.PlaceEnd(id, this.gameObject);
             GameManager.CardInHand = false;
@@ -55,30 +57,72 @@ public class CardHolder : MonoBehaviour
             
             transform.position = Mouse.MousePosition;
             GameManager.CardInHand = true;
+        }*/
+
+        if(CanPick && Input.GetMouseButtonDown(0))
+        {
+            if(attach)
+            {
+                inventory.PlaceEnd(id, this.gameObject);
+                GameManager.CardInHand = false;
+                GameManager.CardHand = null;
+                attach = false;
+            }else
+            {
+                inventory.Replace(id);
+                GameManager.CardHand = this.gameObject;
+                GameManager.CardInHand = true;
+                attach = true;
+            }
         }
 
-        
+        if(attach)
+        {
+            transform.position = Mouse.MousePosition;
+            GameManager.CardInHand = true;
+        }
+
+        if(attach && Input.GetKeyDown(KeyCode.S))
+        {
+            GameManager.CardHand = null;
+            GameManager.CardInHand = false;
+            Destroy(gameObject);
+        }
+
         
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Mouse") && GameManager.CardInHand==false)
+        /*if(collision.CompareTag("Mouse") && GameManager.CardInHand==false)
         {
-            PostoGo = new Vector3(startPos.x, startPos.y + UpDiff, startPos.z);
+            
             MouseOn = true;
             GameManager.CardHand = this.gameObject;
+            
+        }*/
+        if(GameManager.CardInHand==false)
+        {
+            PostoGo = new Vector3(startPos.x, startPos.y + UpDiff, startPos.z);
             Descri.SetActive(true);
+            CanPick = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.CompareTag("Mouse"))
+        /* if(collision.CompareTag("Mouse"))
+         {
+             PostoGo = startPos;
+             MouseOn = false;
+             GameManager.CardHand = null;
+             
+         }*/
+        if(GameManager.CardInHand == false)
         {
-            PostoGo = startPos;
-            MouseOn = false;
             Descri.SetActive(false);
+            PostoGo = startPos;
+            CanPick = false;
         }
     }
 }
