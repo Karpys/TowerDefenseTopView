@@ -6,10 +6,15 @@ public class Tower : MonoBehaviour
 {
     // Start is called before the first frame update
     public float range;
-    public GameObject Circle;
     public float multi;
-    public MapManager Map;
+
+    public GameObject Circle;
     public GameObject Closest;
+    public GameObject ProjBase;
+    public Projectile Proj;
+   
+    public MapManager Map;
+   
     public Color DebugCol;
 
     public float CdShoot;
@@ -35,6 +40,9 @@ public class Tower : MonoBehaviour
                 if(CdShoot<=0)
                 {
                     CdShoot = CdShootSet;
+                    GameObject Shot = Instantiate(ProjBase, transform.position, transform.rotation);
+                    Shot.GetComponent<ProjectileHolder>().ProjStats = Proj;
+                    Shot.GetComponent<ProjectileHolder>().Follower = Closest;
                     Debug.Log("Shoot");
                 }
             }

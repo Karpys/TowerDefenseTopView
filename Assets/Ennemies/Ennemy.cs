@@ -8,6 +8,7 @@ public class Ennemy : MonoBehaviour
     public MapManager Pathing;
     public List<Transform> Path;
     public bool Dummy;
+    public int life;
     void Start()
     {
         if(!Dummy)
@@ -37,6 +38,18 @@ public class Ennemy : MonoBehaviour
             }
         }
         transform.position = new Vector3(transform.position.x, transform.position.y, -1);
+
+           
         }
+        if (life <= 0)
+        {
+            Clear();
+        }
+    }
+
+    public void Clear()
+    {
+        Pathing.ListEnnemy.Remove(this.gameObject);
+        Destroy(gameObject);
     }
 }

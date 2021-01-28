@@ -237,6 +237,16 @@ PrefabInstance:
       propertyPath: Dummy
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 220918265236072339, guid: 0de161b363087e444a83a28ad2942de6,
+        type: 3}
+      propertyPath: life
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 220918265236072339, guid: 0de161b363087e444a83a28ad2942de6,
+        type: 3}
+      propertyPath: Pathing
+      value: 
+      objectReference: {fileID: 1296429481}
     - target: {fileID: 220918265236072340, guid: 0de161b363087e444a83a28ad2942de6,
         type: 3}
       propertyPath: m_Name
@@ -449,6 +459,16 @@ PrefabInstance:
       propertyPath: Dummy
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 220918265236072339, guid: 0de161b363087e444a83a28ad2942de6,
+        type: 3}
+      propertyPath: life
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 220918265236072339, guid: 0de161b363087e444a83a28ad2942de6,
+        type: 3}
+      propertyPath: Pathing
+      value: 
+      objectReference: {fileID: 1296429481}
     - target: {fileID: 220918265236072340, guid: 0de161b363087e444a83a28ad2942de6,
         type: 3}
       propertyPath: m_Name
@@ -523,6 +543,16 @@ PrefabInstance:
       propertyPath: Dummy
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 220918265236072339, guid: 0de161b363087e444a83a28ad2942de6,
+        type: 3}
+      propertyPath: life
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 220918265236072339, guid: 0de161b363087e444a83a28ad2942de6,
+        type: 3}
+      propertyPath: Pathing
+      value: 
+      objectReference: {fileID: 1296429481}
     - target: {fileID: 220918265236072340, guid: 0de161b363087e444a83a28ad2942de6,
         type: 3}
       propertyPath: m_Name
@@ -597,6 +627,16 @@ PrefabInstance:
       propertyPath: Dummy
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 220918265236072339, guid: 0de161b363087e444a83a28ad2942de6,
+        type: 3}
+      propertyPath: life
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 220918265236072339, guid: 0de161b363087e444a83a28ad2942de6,
+        type: 3}
+      propertyPath: Pathing
+      value: 
+      objectReference: {fileID: 1296429481}
     - target: {fileID: 220918265236072340, guid: 0de161b363087e444a83a28ad2942de6,
         type: 3}
       propertyPath: m_Name

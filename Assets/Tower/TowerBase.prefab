@@ -127,10 +127,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 2
-  Circle: {fileID: 4077366084761973943}
   multi: 0
-  Map: {fileID: 0}
+  Circle: {fileID: 4077366084761973943}
   Closest: {fileID: 0}
+  ProjBase: {fileID: 6009056714607349796, guid: 8d6e1ab394a723c4681ac984d8a8bd78,
+    type: 3}
+  Proj: {fileID: 11400000, guid: a3ceb4bb0cc2cc54599781f8136a87ad, type: 2}
+  Map: {fileID: 0}
   DebugCol: {r: 0.36418653, g: 0.8301887, b: 0.36418653, a: 1}
   CdShoot: 2
 --- !u!212 &6503223110599026258
