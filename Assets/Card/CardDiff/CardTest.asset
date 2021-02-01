@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: CardTest
   m_EditorClassIdentifier: 
   Image: {fileID: 21300000, guid: f6dfc5706a435874088940fef2290aa7, type: 3}
-  name: Boost
-  description: "Boost la vitesse de la tourelle li\xE9e"
+  name: Tower
+  description: Tower Brr
   cost: 5
+  state: 0
+  Turret: {fileID: 6503223110599026259, guid: 8622082618c71a142aa047c1096c9762, type: 3}

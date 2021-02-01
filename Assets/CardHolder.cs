@@ -15,6 +15,7 @@ public class CardHolder : MonoBehaviour
     public TextMeshProUGUI Cost;
     public GameObject Descri;
     public InventoryCard inventory;
+    public TurretState state;
 
 
 
@@ -34,6 +35,7 @@ public class CardHolder : MonoBehaviour
         Cost.text = stats.cost.ToString();
         startPos = transform.position;
         PostoGo = startPos;
+        state = stats.state;
     }
 
     // Update is called once per frame
@@ -63,12 +65,29 @@ public class CardHolder : MonoBehaviour
         {
             if(attach)
             {
-                inventory.PlaceEnd(id, this.gameObject);
-                GameManager.CardInHand = false;
-                GameManager.CardHand = null;
-                attach = false;
+                if (state == CardHolder.TurretState.Tower)
+                {
+                    GridScript grid = CreateGridMap.ClosestGrid.GetComponent<GridScript>();
+                    if(grid.Occup==false)
+                    {
+                        grid.Occup = true;
+                        GameObject Turr = Instantiate(stats.Turret, grid.transform.position, grid.transform.rotation);
+                        Turr.GetComponent<Tower>().Map = MapManager.map;
+                        DeleteCard();
+                        /*Debug.Log("Delete");*/
+                    }else
+                    {
+                        ReplaceEnd();
+                        /*Debug.Log("Replace");*/
+                    }
+                }else
+                {
+                    ReplaceEnd();
+                   /* Debug.Log("Replace");*/
+                }
             }else
             {
+                /*Debug.Log("Replace id");*/
                 inventory.Replace(id);
                 GameManager.CardHand = this.gameObject;
                 GameManager.CardInHand = true;
@@ -80,16 +99,30 @@ public class CardHolder : MonoBehaviour
         {
             transform.position = Mouse.MousePosition;
             GameManager.CardInHand = true;
+            /*Debug.Log("Attach");*/
         }
 
         if(attach && Input.GetKeyDown(KeyCode.S))
         {
-            GameManager.CardHand = null;
-            GameManager.CardInHand = false;
-            Destroy(gameObject);
+            DeleteCard();
         }
 
         
+    }
+
+    public void ReplaceEnd()
+    {
+        inventory.PlaceEnd(id, this.gameObject);
+        GameManager.CardInHand = false;
+        GameManager.CardHand = null;
+        attach = false;
+    }
+    public void DeleteCard()
+    {
+        GameManager.CardHand = null;
+        GameManager.CardInHand = false;
+        attach = false;
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -124,5 +157,11 @@ public class CardHolder : MonoBehaviour
             PostoGo = startPos;
             CanPick = false;
         }
+    }
+
+    public enum TurretState
+    {
+        Tower,
+        PowerUp,
     }
 }

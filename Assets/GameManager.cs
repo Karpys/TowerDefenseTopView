@@ -5,8 +5,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
+    
     public static bool CardInHand;
     public static GameObject CardHand;
+    public bool Cardh;
+    public GameObject Car;
     void Start()
     {
         
@@ -15,6 +18,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Car = CardHand;
+        Cardh = CardInHand;
     }
 }

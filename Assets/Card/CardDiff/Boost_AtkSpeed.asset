@@ -16,3 +16,5 @@ MonoBehaviour:
   name: Boost
   description: Boost Atk Speed
   cost: 4
+  state: 1
+  Turret: {fileID: 0}

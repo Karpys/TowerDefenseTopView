@@ -16,6 +16,7 @@ public class CreateGridMap : MonoBehaviour
     public float ScreensizeWidth;
     public float ScreenHeigh;
     public Transform StartTransform;
+    public static GameObject ClosestGrid;
     
     void Start()
     {
@@ -33,7 +34,7 @@ public class CreateGridMap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetClosest();
+        ClosestGrid=GetClosest();
     }
 
     public GameObject GetClosest()

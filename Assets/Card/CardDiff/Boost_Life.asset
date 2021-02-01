@@ -16,3 +16,5 @@ MonoBehaviour:
   name: Boost
   description: Add 1 Heart
   cost: 3
+  state: 1
+  Turret: {fileID: 0}

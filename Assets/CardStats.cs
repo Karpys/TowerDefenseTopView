@@ -12,4 +12,6 @@ public class CardStats : ScriptableObject
     public new string name;
     public string description;
     public int cost;
+    public CardHolder.TurretState state;
+    public GameObject Turret;
 }
