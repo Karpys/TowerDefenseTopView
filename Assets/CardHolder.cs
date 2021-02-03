@@ -134,7 +134,7 @@ public class CardHolder : MonoBehaviour
             GameManager.CardHand = this.gameObject;
             
         }*/
-        if(GameManager.CardInHand==false)
+        if(GameManager.CardInHand==false && collision.CompareTag("Mouse"))
         {
             PostoGo = new Vector3(startPos.x, startPos.y + UpDiff, startPos.z);
             Descri.SetActive(true);
@@ -151,7 +151,7 @@ public class CardHolder : MonoBehaviour
              GameManager.CardHand = null;
              
          }*/
-        if(GameManager.CardInHand == false)
+        if(GameManager.CardInHand == false && collision.CompareTag("Mouse"))
         {
             Descri.SetActive(false);
             PostoGo = startPos;

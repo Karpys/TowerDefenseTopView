@@ -47,8 +47,6 @@ public class Tower : MonoBehaviour
                 }
             }
         }
-
-
         if(CdShoot>0)
         {
         CdShoot -= Time.deltaTime;
@@ -56,5 +54,19 @@ public class Tower : MonoBehaviour
 
     }
 
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Mouse"))
+        {
+            Circle.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Mouse"))
+        {
+            Circle.SetActive(false);
+        }
+    }
 }

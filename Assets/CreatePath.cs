@@ -29,6 +29,7 @@ public class CreatePath : MonoBehaviour
         }
         }
         GetClosest().GetComponent<SpriteRenderer>().color = GetClosest().GetComponent<GridScript>().PathColor;
+        GetClosest().GetComponent<GridScript>().Occup = true;
     }
 
     public GameObject GetClosest()
