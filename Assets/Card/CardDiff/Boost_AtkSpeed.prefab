@@ -436,6 +436,9 @@ MonoBehaviour:
   Cost: {fileID: 4111507936521884213}
   Descri: {fileID: 6709315080691349855}
   inventory: {fileID: 0}
+  state: 0
+  SlotBase: {fileID: 3707574154380576186, guid: e5f3e3864dc980c45ab0dd0524424e7b,
+    type: 3}
   startPos: {x: 0, y: 0, z: 0}
   PostoGo: {x: 0, y: 0, z: 0}
   MouseOn: 0

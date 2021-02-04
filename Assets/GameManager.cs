@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     
     public static bool CardInHand;
     public static GameObject CardHand;
+    public static GameObject TowerOnMouse;
     public bool Cardh;
     public GameObject Car;
     void Start()

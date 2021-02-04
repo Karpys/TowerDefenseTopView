@@ -9,12 +9,13 @@ public class Tower : MonoBehaviour
     public float multi;
 
     public GameObject Circle;
+    public GameObject OnMouse;
     public GameObject Closest;
     public GameObject ProjBase;
     public Projectile Proj;
-   
+    public SlotManager SlotManager;
     public MapManager Map;
-   
+    public int nbrSlot;
     public Color DebugCol;
 
     public float CdShoot;
@@ -58,7 +59,8 @@ public class Tower : MonoBehaviour
     {
         if(collision.CompareTag("Mouse"))
         {
-            Circle.SetActive(true);
+            GameManager.TowerOnMouse = this.gameObject;
+            OnMouse.SetActive(true);
         }
     }
 
@@ -66,7 +68,8 @@ public class Tower : MonoBehaviour
     {
         if(collision.CompareTag("Mouse"))
         {
-            Circle.SetActive(false);
+            GameManager.TowerOnMouse = null;
+            OnMouse.SetActive(false);
         }
     }
 }

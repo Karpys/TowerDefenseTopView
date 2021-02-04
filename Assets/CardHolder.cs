@@ -16,7 +16,7 @@ public class CardHolder : MonoBehaviour
     public GameObject Descri;
     public InventoryCard inventory;
     public TurretState state;
-
+    public GameObject SlotBase;
 
 
     public Vector3 startPos;
@@ -82,7 +82,27 @@ public class CardHolder : MonoBehaviour
                     }
                 }else
                 {
-                    ReplaceEnd();
+                    if(GameManager.TowerOnMouse)
+                    {
+                        if(GameManager.TowerOnMouse.GetComponent<Tower>().nbrSlot>0)
+                        {
+                            Transform Parent = GameManager.TowerOnMouse.GetComponent<Tower>().SlotManager.GetComponent<SlotManager>().ListSlotTrans[0].transform;
+                            GameManager.TowerOnMouse.GetComponent<Tower>().SlotManager.GetComponent<SlotManager>().NextPlace();
+                            GameObject Slot = Instantiate(SlotBase, Parent.position, Parent.rotation,Parent);
+                            Slot.GetComponent<Image>().sprite = Image.sprite;
+                            Slot.GetComponent<SlotScript>().SlotManager = GameManager.TowerOnMouse.GetComponent<Tower>().SlotManager.GetComponent<SlotManager>();
+                            GameManager.TowerOnMouse.GetComponent<Tower>().SlotManager.GetComponent<SlotManager>().ListSlot.Add(Slot);
+                            GameManager.TowerOnMouse.GetComponent<Tower>().nbrSlot -= 1;
+                            DeleteCard();
+                        }else
+                        {
+                            ReplaceEnd();
+                        }
+                    }else
+                    {
+                        ReplaceEnd();
+                    }
+                    
                    /* Debug.Log("Replace");*/
                 }
             }else
