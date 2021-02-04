@@ -91,3 +91,4 @@ MonoBehaviour:
   SlotManager: {fileID: 0}
   speed: 0.1
   index: 0
+  life: 2

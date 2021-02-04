@@ -14,4 +14,5 @@ public class CardStats : ScriptableObject
     public int cost;
     public CardHolder.TurretState state;
     public GameObject Turret;
+    public PowerUp TypePower;
 }

@@ -9,7 +9,7 @@ public class Tower : MonoBehaviour
     public float multi;
 
     public GameObject Circle;
-    public GameObject OnMouse;
+    public Canvas Canvas;
     public GameObject Closest;
     public GameObject ProjBase;
     public Projectile Proj;
@@ -19,7 +19,7 @@ public class Tower : MonoBehaviour
     public Color DebugCol;
 
     public float CdShoot;
-    private float CdShootSet;
+    public float CdShootSet;
     void Start()
     {
         CdShootSet = CdShoot;
@@ -60,7 +60,8 @@ public class Tower : MonoBehaviour
         if(collision.CompareTag("Mouse"))
         {
             GameManager.TowerOnMouse = this.gameObject;
-            OnMouse.SetActive(true);
+            Canvas.enabled = true;
+            Circle.SetActive(true);
         }
     }
 
@@ -69,7 +70,8 @@ public class Tower : MonoBehaviour
         if(collision.CompareTag("Mouse"))
         {
             GameManager.TowerOnMouse = null;
-            OnMouse.SetActive(false);
+            Canvas.enabled = false;
+            Circle.SetActive(false);
         }
     }
 }

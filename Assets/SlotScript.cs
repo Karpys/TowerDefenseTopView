@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static TowerUp.TowerUpgrade;
 
 public class SlotScript : MonoBehaviour
 {
@@ -9,9 +10,11 @@ public class SlotScript : MonoBehaviour
     public SlotManager SlotManager;
     public float speed;
     public int index;
+    public int life;
+    public PowerUp Power;
     void Start()
     {
-        
+        ApplyUp(SlotManager.TowerRef, Power);
     }
 
     // Update is called once per frame
@@ -19,5 +22,13 @@ public class SlotScript : MonoBehaviour
     {
         PosToGo = SlotManager.ListSlotTrans[index].transform;
         transform.position = Vector2.Lerp(transform.position, SlotManager.ListSlotTrans[index].transform.position, speed);
+
+        if(life<=0)
+        {
+            Debug.Log("bava");
+            DeApplyUp(SlotManager.TowerRef, Power);
+            SlotManager.Replace(index);
+            SlotManager.DeleteSlot(this.gameObject);
+        }
     }
 }

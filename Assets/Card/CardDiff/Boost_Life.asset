@@ -18,3 +18,4 @@ MonoBehaviour:
   cost: 3
   state: 1
   Turret: {fileID: 0}
+  TypePower: 1

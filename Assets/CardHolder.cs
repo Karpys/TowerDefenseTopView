@@ -18,7 +18,6 @@ public class CardHolder : MonoBehaviour
     public TurretState state;
     public GameObject SlotBase;
 
-
     public Vector3 startPos;
     public Vector3 PostoGo;
     public bool MouseOn;
@@ -90,6 +89,7 @@ public class CardHolder : MonoBehaviour
                             GameManager.TowerOnMouse.GetComponent<Tower>().SlotManager.GetComponent<SlotManager>().NextPlace();
                             GameObject Slot = Instantiate(SlotBase, Parent.position, Parent.rotation,Parent);
                             Slot.GetComponent<Image>().sprite = Image.sprite;
+                            Slot.GetComponent<SlotScript>().Power = stats.TypePower;
                             Slot.GetComponent<SlotScript>().SlotManager = GameManager.TowerOnMouse.GetComponent<Tower>().SlotManager.GetComponent<SlotManager>();
                             GameManager.TowerOnMouse.GetComponent<Tower>().SlotManager.GetComponent<SlotManager>().ListSlot.Add(Slot);
                             GameManager.TowerOnMouse.GetComponent<Tower>().nbrSlot -= 1;
