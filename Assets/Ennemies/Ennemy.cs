@@ -9,6 +9,7 @@ public class Ennemy : MonoBehaviour
     public List<Transform> Path;
     public bool Dummy;
     public int life;
+    public float speed;
     void Start()
     {
         if(!Dummy)
@@ -28,7 +29,7 @@ public class Ennemy : MonoBehaviour
         {
             if (new Vector2(Path[0].transform.position.x, Path[0].transform.position.y)!=new Vector2(transform.position.x,transform.position.y))
             {
-                transform.position = Vector2.MoveTowards(transform.position, Path[0].transform.position, 0.1f);
+                transform.position = Vector2.MoveTowards(transform.position, Path[0].transform.position, speed * Time.deltaTime);
                 
             }
             else

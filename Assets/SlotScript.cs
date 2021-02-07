@@ -21,7 +21,7 @@ public class SlotScript : MonoBehaviour
     void Update()
     {
         PosToGo = SlotManager.ListSlotTrans[index].transform;
-        transform.position = Vector2.Lerp(transform.position, SlotManager.ListSlotTrans[index].transform.position, speed);
+        transform.position = Vector2.Lerp(transform.position, SlotManager.ListSlotTrans[index].transform.position, speed*Time.deltaTime);
 
         if(life<=0)
         {
