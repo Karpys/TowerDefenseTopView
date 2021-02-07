@@ -97,6 +97,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pathing: {fileID: 0}
   Path: []
+  Dummy: 0
+  life: 0
+  speed: 5
 --- !u!1 &1937332157329127811
 GameObject:
   m_ObjectHideFlags: 0
