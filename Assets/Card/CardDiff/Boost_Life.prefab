@@ -626,7 +626,7 @@ MonoBehaviour:
   PostoGo: {x: 0, y: 0, z: 0}
   MouseOn: 0
   UpDiff: 0.2
-  speed: 0.1
+  speed: 10
   id: 0
   attach: 0
   CanPick: 0

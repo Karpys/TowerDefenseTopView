@@ -40,7 +40,7 @@ public class CardHolder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, PostoGo, speed);
+        transform.position = Vector3.Lerp(transform.position, PostoGo, speed*Time.deltaTime);
         /*if (Input.GetMouseButtonUp(0) && MouseOn)
         {
             inventory.PlaceEnd(id, this.gameObject);
