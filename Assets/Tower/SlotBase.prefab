@@ -89,6 +89,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PosToGo: {fileID: 0}
   SlotManager: {fileID: 0}
-  speed: 0.1
+  speed: 7
   index: 0
   life: 2
+  Power: 0

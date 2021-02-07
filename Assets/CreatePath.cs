@@ -22,7 +22,7 @@ public class CreatePath : MonoBehaviour
         {
         if(ListTransform[0].transform.position!=transform.position)
         {
-            transform.position = Vector2.MoveTowards(transform.position, ListTransform[0].transform.position,speed);
+            transform.position = Vector2.MoveTowards(transform.position, ListTransform[0].transform.position,speed*Time.deltaTime);
         }else
         {
             ListTransform.Remove(ListTransform[0]);
