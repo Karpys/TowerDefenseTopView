@@ -8,7 +8,7 @@ public class Ennemy : MonoBehaviour
     public MapManager Pathing;
     public List<Transform> Path;
     public bool Dummy;
-    public int life;
+    public float life;
     public float speed;
     void Start()
     {

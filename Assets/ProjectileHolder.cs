@@ -27,4 +27,13 @@ public class ProjectileHolder : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Ennemy"))
+        {
+            collision.gameObject.GetComponent<Ennemy>().life -= dmg;
+            Destroy(gameObject);
+        }
+    }
 }
