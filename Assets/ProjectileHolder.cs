@@ -21,7 +21,20 @@ public class ProjectileHolder : MonoBehaviour
     {
         if(Follower)
         {
-            transform.position = Vector2.MoveTowards(transform.position, Follower.transform.position, speed * Time.deltaTime);
+            if(ProjStats.TypeMouv==TypeMouvementProj.MOVETOWARDS)
+            {
+
+                transform.position = Vector2.MoveTowards(transform.position, Follower.transform.position, speed * Time.deltaTime);
+
+            }
+            else if(ProjStats.TypeMouv == TypeMouvementProj.LERP)
+            {
+                transform.position = Vector2.LerpUnclamped(transform.position, Follower.transform.position, speed * Time.deltaTime);
+            }else if(ProjStats.TypeMouv == TypeMouvementProj.ACCELERATION)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, Follower.transform.position, speed * Time.deltaTime);
+                speed += ProjStats.Acc;
+            }
         }else
         {
             Destroy(gameObject);
