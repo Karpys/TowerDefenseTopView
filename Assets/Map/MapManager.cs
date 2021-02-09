@@ -5,7 +5,7 @@ using UnityEngine;
 public class MapManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    public List<Transform> PathingEnnemy;
+    public List<GameObject> PathingEnnemy;
     public List<GameObject> ListEnnemy;
     public static MapManager map;
     void Start()

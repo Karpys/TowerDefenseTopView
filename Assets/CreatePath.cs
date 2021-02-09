@@ -6,18 +6,29 @@ using static MathsUti.MathUtilities;
 public class CreatePath : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    public MapManager Map;
     public List<GameObject> ListTransform;
     public CreateGridMap grid;
     public float speed;
+    public float speedSet;
+    public float CdStop;
     void Start()
     {
+        ListTransform = new List<GameObject>(Map.PathingEnnemy);
         transform.position = ListTransform[0].transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(CdStop>0)
+        {
+            CdStop -= Time.deltaTime;
+            if(CdStop<=0)
+            {
+                speed = speedSet;
+            }
+        }
         if(ListTransform.Count>0)
         {
         if(ListTransform[0].transform.position!=transform.position)

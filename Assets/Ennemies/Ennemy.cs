@@ -6,7 +6,7 @@ public class Ennemy : MonoBehaviour
 {
     // Start is called before the first frame update
     public MapManager Pathing;
-    public List<Transform> Path;
+    public List<GameObject> Path;
     public bool Dummy;
     public float life;
     public float speed;
@@ -14,7 +14,7 @@ public class Ennemy : MonoBehaviour
     {
         if(!Dummy)
         {
-        Path = Pathing.PathingEnnemy;
+        Path = new List<GameObject>(Pathing.PathingEnnemy);
         transform.position = new Vector3(Path[0].transform.position.x, Path[0].transform.position.y, transform.position.z);
         }
     }
