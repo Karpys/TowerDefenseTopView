@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &45204374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 220918265236072340, guid: 0de161b363087e444a83a28ad2942de6,
+    type: 3}
+  m_PrefabInstance: {fileID: 233407373}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &68078748
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,12 +2240,22 @@ PrefabInstance:
     - target: {fileID: 220918265236072339, guid: 0de161b363087e444a83a28ad2942de6,
         type: 3}
       propertyPath: life
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 220918265236072339, guid: 0de161b363087e444a83a28ad2942de6,
         type: 3}
       propertyPath: speed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 220918265236072339, guid: 0de161b363087e444a83a28ad2942de6,
+        type: 3}
+      propertyPath: Dummy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 220918265236072339, guid: 0de161b363087e444a83a28ad2942de6,
+        type: 3}
+      propertyPath: Gelee
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 220918265236072340, guid: 0de161b363087e444a83a28ad2942de6,
         type: 3}
@@ -2614,7 +2630,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Deck.Array.data[0]
       value: 
-      objectReference: {fileID: 6071707397598290524, guid: d7ded09a024d57d4e85af0e02cd8e2c5,
+      objectReference: {fileID: 4909090874853722460, guid: 273d8eeccc376a641b71ba95f6c02e53,
         type: 3}
     - target: {fileID: 902910145256920482, guid: e770a0ea03f15dd47933bf35f1143c87,
         type: 3}
@@ -2626,7 +2642,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Deck.Array.data[2]
       value: 
-      objectReference: {fileID: 4608949480037449215, guid: 3a205229c476a2d498a4f32202d1b47a,
+      objectReference: {fileID: 6071707397598290524, guid: d7ded09a024d57d4e85af0e02cd8e2c5,
         type: 3}
     - target: {fileID: 902910145256920482, guid: e770a0ea03f15dd47933bf35f1143c87,
         type: 3}
@@ -2896,7 +2912,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995874587}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 68078749}
@@ -3682,7 +3698,8 @@ MonoBehaviour:
   - {fileID: 1762525548}
   - {fileID: 370132381}
   - {fileID: 1675231671}
-  ListEnnemy: []
+  ListEnnemy:
+  - {fileID: 45204374}
 --- !u!4 &1960067606
 Transform:
   m_ObjectHideFlags: 0

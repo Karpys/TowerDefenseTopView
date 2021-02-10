@@ -11,8 +11,16 @@ public class TowerUpgrade
     {
             if(type == PowerUp.ATKSPEEDUP)
             {
+                if (Tow.gameObject.GetComponent<Bonus>())
+                {
+                    if(Tow.gameObject.GetComponent<Bonus>().bonus==Bonus.BonusType.AtkSpeedx2)
+                    {
+                    Tow.CdShootSet -= 0.20f;
+                    }
+                }
                 Tow.CdShootSet -= 0.20f;
-            }else if(type == PowerUp.LIFEUP)
+            }
+            else if(type == PowerUp.LIFEUP)
             {
                 
             }else if(type == PowerUp.RANGEUP)

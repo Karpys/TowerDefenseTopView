@@ -10,6 +10,7 @@ public class Ennemy : MonoBehaviour
     public bool Dummy;
     public float life;
     public float speed;
+    public bool Gelee;
     void Start()
     {
         if(!Dummy)
