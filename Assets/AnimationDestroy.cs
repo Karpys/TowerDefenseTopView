@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FinishHolder : MonoBehaviour
+public class AnimationDestroy : MonoBehaviour
 {
-    public Finisher.FinishType FinishType;
-    public GameObject Effect;
     // Start is called before the first frame update
+    public float TimeAnim;
     void Start()
     {
         
@@ -15,6 +14,10 @@ public class FinishHolder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        TimeAnim -= Time.deltaTime;
+        if(TimeAnim<=0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

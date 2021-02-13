@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FinishType: 0
+  Effect: {fileID: 6866354486233822751, guid: 97b59fa5672651c43bafc382bebba06d, type: 3}

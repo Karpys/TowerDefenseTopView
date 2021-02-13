@@ -28,8 +28,8 @@ public class Finisher : MonoBehaviour
             {
                 if(Ennemy.GetComponent<Ennemy>().Gelee)
                 {
-                    Ennemy.GetComponent<Ennemy>().life -= 10;
-                    Debug.Log("Bg Remi");
+                        Ennemy.GetComponent<Ennemy>().life -= 10;
+                        Instantiate(Finish[i].GetComponent<FinishHolder>().Effect, Ennemy.transform.position, transform.rotation, Ennemy.transform);
                 }
             }
         }
