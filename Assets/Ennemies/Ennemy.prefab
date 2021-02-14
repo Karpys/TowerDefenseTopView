@@ -100,8 +100,9 @@ MonoBehaviour:
   Pathing: {fileID: 0}
   Path: []
   Dummy: 0
-  life: 0
+  life: 10
   speed: 5
+  Gelee: 0
 --- !u!61 &7800249921730526927
 BoxCollider2D:
   m_ObjectHideFlags: 0
