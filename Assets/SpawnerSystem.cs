@@ -5,8 +5,10 @@ using UnityEngine;
 public class SpawnerSystem : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject SpawnEnnemies;
+    public List<GameObject> SpawnEnnemies;
     public MapManager Map;
+    public Spawn Spawner;
+    public int IndexSpawn;
     void Start()
     {
         
@@ -17,9 +19,6 @@ public class SpawnerSystem : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.S))
         {
-            GameObject En = Instantiate(SpawnEnnemies, transform.position, transform.rotation);
-            En.GetComponent<Ennemy>().Pathing = Map;
-            Map.ListEnnemy.Add(En);
         }
     }
 }
