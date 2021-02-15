@@ -15,6 +15,7 @@ public class Tower : MonoBehaviour
     public Projectile Proj;
     public SlotManager SlotManager;
     public MapManager Map;
+    public ShootSystem Shoot;
     public int nbrSlot;
     public Color DebugCol;
 
@@ -44,6 +45,7 @@ public class Tower : MonoBehaviour
                     GameObject Shot = Instantiate(ProjBase, transform.position, transform.rotation);
                     Shot.GetComponent<ProjectileHolder>().ProjStats = Proj;
                     Shot.GetComponent<ProjectileHolder>().Follower = Closest;
+                    Shoot.Shoot(Shot);
                     Debug.Log("Shoot");
                 }
             }

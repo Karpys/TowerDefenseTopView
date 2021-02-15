@@ -16,3 +16,5 @@ MonoBehaviour:
   name: ProjTest
   speed: 2
   dmg: 2
+  Acc: 0.1
+  TypeMouv: 1

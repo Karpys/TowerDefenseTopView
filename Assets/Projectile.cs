@@ -12,4 +12,14 @@ public class Projectile : ScriptableObject
     public new string name;
     public float speed;
     public float dmg;
+    public float Acc;
+    public TypeMouvementProj TypeMouv;
+}
+
+
+public enum TypeMouvementProj
+{
+    LERP,
+    ACCELERATION,
+    MOVETOWARDS,
 }

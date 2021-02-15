@@ -392,6 +392,7 @@ GameObject:
   - component: {fileID: 6503223110599026257}
   - component: {fileID: 6503223110599026258}
   - component: {fileID: 5935180548050991525}
+  - component: {fileID: 2108611728254779191}
   m_Layer: 0
   m_Name: TowerBase
   m_TagString: Untagged
@@ -437,6 +438,7 @@ MonoBehaviour:
   Proj: {fileID: 11400000, guid: a3ceb4bb0cc2cc54599781f8136a87ad, type: 2}
   SlotManager: {fileID: 1141193065640649908}
   Map: {fileID: 0}
+  Shoot: {fileID: 0}
   nbrSlot: 3
   DebugCol: {r: 0.36418653, g: 0.8301887, b: 0.36418653, a: 1}
   CdShoot: 2
@@ -517,6 +519,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &2108611728254779191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6503223110599026259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dedaf22c492d4d24294d1ea2bdaf94e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EmmiterToAdd: []
+  Finish:
+  - {fileID: 8572867946194960435, guid: dba628c6bae088148ae0f59a09e9618f, type: 3}
 --- !u!1 &6606704926972394449
 GameObject:
   m_ObjectHideFlags: 0

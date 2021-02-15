@@ -21,10 +21,45 @@ public class ProjectileHolder : MonoBehaviour
     {
         if(Follower)
         {
-            transform.position = Vector2.MoveTowards(transform.position, Follower.transform.position, speed * Time.deltaTime);
+            if(ProjStats.TypeMouv==TypeMouvementProj.MOVETOWARDS)
+            {
+
+                transform.position = Vector2.MoveTowards(transform.position, Follower.transform.position, speed * Time.deltaTime);
+
+            }
+            else if(ProjStats.TypeMouv == TypeMouvementProj.LERP)
+            {
+                transform.position = Vector2.LerpUnclamped(transform.position, Follower.transform.position, speed * Time.deltaTime);
+            }else if(ProjStats.TypeMouv == TypeMouvementProj.ACCELERATION)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, Follower.transform.position, speed * Time.deltaTime);
+                speed += ProjStats.Acc;
+            }
         }else
         {
             Destroy(gameObject);
+        }
+    }
+
+    public void FinisherActivate()
+    {
+        if(gameObject.GetComponent<Finisher>())
+        {
+            if(Follower)
+            {
+            gameObject.GetComponent<Finisher>().ApplyFinish(Follower);
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Ennemy"))
+        {
+            collision.gameObject.GetComponent<Ennemy>().life -= dmg;
+            FinisherActivate();
+            Destroy(gameObject);
+            
         }
     }
 }
