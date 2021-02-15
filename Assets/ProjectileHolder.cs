@@ -47,7 +47,7 @@ public class ProjectileHolder : MonoBehaviour
         {
             if(Follower)
             {
-            gameObject.GetComponent<Finisher>().ApplyFinish(Follower);
+            gameObject.GetComponent<Finisher>().ApplyFinish(Follower,this.gameObject);
             }
         }
     }

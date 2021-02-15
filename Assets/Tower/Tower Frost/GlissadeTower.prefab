@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eadf5c327bb5752418c2a449a66e971d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 6
+  range: 3.5
   multi: 0
   Circle: {fileID: 5431491094327760241}
   Canvas: {fileID: 1610958826475936044}
@@ -240,8 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EmmiterToAdd: []
-  Finish:
-  - {fileID: 8572867946194960435, guid: dba628c6bae088148ae0f59a09e9618f, type: 3}
+  Finish: []
 --- !u!1 &5031016425339944027
 GameObject:
   m_ObjectHideFlags: 0

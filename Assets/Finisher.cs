@@ -17,7 +17,7 @@ public class Finisher : MonoBehaviour
         
     }
 
-    public void ApplyFinish(GameObject Ennemy)
+    public void ApplyFinish(GameObject Ennemy,GameObject Proj)
     {
         for(int i=0;i<Finish.Count;i++)
         {
@@ -28,8 +28,8 @@ public class Finisher : MonoBehaviour
             {
                 if(Ennemy.GetComponent<Ennemy>().Gelee)
                 {
-                        Ennemy.GetComponent<Ennemy>().life -= 10;
-                        Instantiate(Finish[i].GetComponent<FinishHolder>().Effect, Ennemy.transform.position, transform.rotation, Ennemy.transform);
+                        Ennemy.GetComponent<Ennemy>().life -= Proj.GetComponent<ProjectileHolder>().dmg;
+                        Instantiate(Finish[i].GetComponent<FinishHolder>().Effect, new Vector3(Ennemy.transform.position.x, Ennemy.transform.position.y, Ennemy.transform.position.z-1), transform.rotation, Ennemy.transform);
                 }
             }
         }

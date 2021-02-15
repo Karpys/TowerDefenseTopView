@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1f3dff7ab242024eb5eb3393a6c5ff3, type: 3}
+  m_Name: FrozenCard
+  m_EditorClassIdentifier: 
+  Image: {fileID: 21300000, guid: 173b05849f0561a429e6f508a3dbb700, type: 3}
+  name: Frozen Tower
+  description: Double Damage on Frozen En
+  cost: 3
+  state: 0
+  Turret: {fileID: 6074671135536836538, guid: b1b8d3718364ab444beb717f502a7ab6, type: 3}
+  TypePower: 0

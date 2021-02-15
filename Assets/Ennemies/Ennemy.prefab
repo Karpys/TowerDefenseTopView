@@ -102,7 +102,7 @@ MonoBehaviour:
   Dummy: 0
   life: 10
   speed: 5
-  Gelee: 0
+  Gelee: 1
 --- !u!61 &7800249921730526927
 BoxCollider2D:
   m_ObjectHideFlags: 0

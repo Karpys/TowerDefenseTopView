@@ -2476,7 +2476,7 @@ PrefabInstance:
     - target: {fileID: 902910145256920482, guid: e770a0ea03f15dd47933bf35f1143c87,
         type: 3}
       propertyPath: Deck.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 902910145256920482, guid: e770a0ea03f15dd47933bf35f1143c87,
         type: 3}
@@ -2536,7 +2536,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Deck.Array.data[1]
       value: 
-      objectReference: {fileID: 5249434772474899550, guid: 0f45b76f22224904ab2a4df61fd6dedf,
+      objectReference: {fileID: 1175361889213362203, guid: 4cd8522a6f3797e4492e7a4f4b8a8800,
         type: 3}
     - target: {fileID: 902910145256920482, guid: e770a0ea03f15dd47933bf35f1143c87,
         type: 3}
