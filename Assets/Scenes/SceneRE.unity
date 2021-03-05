@@ -3166,9 +3166,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d523bd07a5e0443418a08553c7b1d637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnEnnemies: {fileID: 220918265236072340, guid: 0de161b363087e444a83a28ad2942de6,
-    type: 3}
   Map: {fileID: 1960067605}
+  Spawner: {fileID: 11400000, guid: 8a222feb4c3ea4740ba1ad4cafb32609, type: 2}
+  IndexSpawn: 0
+  ListEnSpawn: []
+  TimeBetweenSpawn: []
+  MaxId: 0
 --- !u!4 &1238220160
 Transform:
   m_ObjectHideFlags: 0

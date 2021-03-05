@@ -13,4 +13,16 @@ MonoBehaviour:
   m_Name: Spawner
   m_EditorClassIdentifier: 
   BlendWave: 0
-  spawn: []
+  spawn:
+  - En: {fileID: 0}
+    Nbr: 2
+    TimeBtw: 0.5
+  - En: {fileID: 0}
+    Nbr: 1
+    TimeBtw: 0.05
+  - En: {fileID: 0}
+    Nbr: 2
+    TimeBtw: 1
+  - En: {fileID: 0}
+    Nbr: 1
+    TimeBtw: 2

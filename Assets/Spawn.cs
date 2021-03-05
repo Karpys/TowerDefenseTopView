@@ -13,5 +13,5 @@ public struct Spawner
 {
     public GameObject En;
     public int Nbr;
-    public float SecBetween;
+    public float TimeBtw;
 }
