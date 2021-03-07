@@ -2933,7 +2933,6 @@ GameObject:
   - component: {fileID: 1146405631}
   - component: {fileID: 1146405630}
   - component: {fileID: 1146405635}
-  - component: {fileID: 1146405636}
   m_Layer: 0
   m_Name: FollowMouse
   m_TagString: Mouse
@@ -3076,18 +3075,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1146405636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146405629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c11596a936300d047846aed43b501bba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1231391683
 GameObject:
   m_ObjectHideFlags: 0
@@ -3167,11 +3154,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 1960067605}
-  Spawner: {fileID: 11400000, guid: 8a222feb4c3ea4740ba1ad4cafb32609, type: 2}
-  IndexSpawn: 0
+  Spawner:
+  - {fileID: 11400000, guid: 8a222feb4c3ea4740ba1ad4cafb32609, type: 2}
+  - {fileID: 11400000, guid: 8a222feb4c3ea4740ba1ad4cafb32609, type: 2}
   ListEnSpawn: []
   TimeBetweenSpawn: []
   MaxId: 0
+  LaunchWave: 0
+  TimerSpawn: 1
 --- !u!4 &1238220160
 Transform:
   m_ObjectHideFlags: 0
